@@ -135,24 +135,65 @@
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <section id="bienvenida">
-    <h2>Bienvenidos</h2>
-    <p style="text-align:center">Somos una comunidad familiar, aventurera y colaborativa unida por la pasión por los VW Safari. Nos reunimos cada viernes a partir de las 9 PM en nuestra sede en Guadalajara para convivir, compartir rutas, participar en exposiciones y formar nuevas amistades. ¡Si tienes un Safari o simplemente te encantan, eres bienvenido!</p>
-    <div class="mapa" style="margin-top: 1.5rem;">
-      <iframe src="https://www.google.com/maps?q=albarran+patria+y+mariano+otero&output=embed"></iframe>
+  <section id="bienvenida" style="background: #fffaf3; padding: 3rem 1rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); max-width: 900px; margin: 3rem auto;">
+    <h2 style="text-align: center; color: #ff6f00; margin-bottom: 1.5rem;">Bienvenidos</h2>
+  
+    <p style="text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+      Somos una comunidad familiar, aventurera y colaborativa unida por la pasión por los VW Safari.
+      Nos reunimos cada viernes a partir de las <strong>9 PM</strong> en nuestra sede en Guadalajara para convivir,
+      compartir rutas, participar en exposiciones y formar nuevas amistades.<br><br>
+      <strong>¡Si tienes un Safari o simplemente te encantan, eres bienvenido!</strong>
+    </p>
+  
+    <div class="mapa" style="margin-top: 2rem; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <iframe 
+        src="https://www.google.com/maps?q=albarran+patria+y+mariano+otero&output=embed" 
+        style="width: 100%; height: 300px; border: none;">
+      </iframe>
     </div>
   </section>
+  
 
-  <section id="eventos" class="eventos">
-    <h2>Próximos Eventos</h2>
-    <ul>
-      <li>📍 Reunión semanal: Viernes 9:00 PM en la sede del club</li>
-      <li>🚗 Ruta a Tapalpa – 10 de agosto 2025</li>
-      <li>🏁 Expo VW Clásicos GDL – 25 de septiembre 2025</li>
-      <li>🎉 <strong><a href="safarifest">SafariFest 2026 – 15 de marzo</a></strong><br>
-          El evento más grande del año para los amantes del VW Safari. Inscribete ¡No te lo pierdas!</li>
-    </ul>
+  <section id="eventos" class="eventos" style="background: #fffdf9; padding: 3rem 1rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.06); max-width: 900px; margin: 3rem auto;">
+    <h2 style="text-align: center; color: #ff6f00; margin-bottom: 2rem;">Próximos Eventos</h2>
+  
+    <div style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+
+      <!-- SafariFest -->
+      <div style="background: #ede7f6; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f389.svg" alt="Fiesta" style="width: 36px; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.1rem;">
+          <a href="safarifest/" style="text-decoration: none; color: #6a1b9a;">SafariFest 2026</a>
+        </h3>
+        <p>🎉 15 de marzo 2026<br>
+        El evento más grande del año para los amantes del VW Safari.<br>
+        <strong>¡Inscríbete y no te lo pierdas!</strong></p>
+      </div>
+      <!-- Evento 1 -->
+      <div style="background: #e3f2fd; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cd.svg" alt="Ubicación" style="width: 36px; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.1rem;">Reunión Semanal</h3>
+        <p>📍 Viernes 9:00 PM<br>en la sede del club</p>
+      </div>
+  
+      <!-- Evento 2 -->
+      <div style="background: #f1f8e9; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f697.svg" alt="Ruta" style="width: 36px; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.1rem;">Ruta a Tapalpa</h3>
+        <p>🚗 10 de agosto 2025</p>
+      </div>
+  
+      <!-- Evento 3 -->
+      <div style="background: #fff3e0; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3c1.svg" alt="Expo" style="width: 36px; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.1rem;">Expo VW Clásicos GDL</h3>
+        <p>🏁 25 de septiembre 2025</p>
+      </div>
+  
+      
+    </div>
   </section>
+  
 
   <section id="galeria">
     <h2>Galería</h2>
@@ -183,16 +224,40 @@
       </div>
       
       
-  <section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <p>¿Quieres unirte al club o saber más? Escríbenos o visita nuestras redes sociales:</p>
-    <ul>
-      <li><strong>Facebook:</strong> <a href="https://www.facebook.com/p/CLUB-Safari-Jalisco-181-100030957204675/" target="_blank">Club Safari Jalisco 181</a></li>
-      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/clubsafarijalisco/" target="_blank">@clubsafarijalisco</a></li>
-      <li><strong>WhatsApp:</strong> <a href="https://wa.me/5213311075004" target="_blank">331 107 5004</a></li>
-    </ul>
-    <p><em>También puedes asistir cualquier viernes a las 9 PM para conocernos en persona.</em></p>
-  </section>
+      <section id="contacto" class="contacto" style="background: #fffdf9; padding: 3rem 1rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.06); max-width: 900px; margin: 3rem auto;">
+        <h2 style="text-align: center; color: #ff6f00; margin-bottom: 1.5rem;">Contáctanos</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.1rem;">
+          ¿Quieres unirte al club o saber más? Escríbenos o visítanos en redes. ¡Estamos para ayudarte!
+        </p>
+      
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+          <a href="https://www.facebook.com/p/CLUB-Safari-Jalisco-181-100030957204675/" target="_blank" style="text-decoration: none; color: inherit;">
+            <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 1rem; width: 230px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width: 40px; height: 40px; margin-bottom: 0.8rem;">
+              <p style="font-weight: bold;">Club Safari Jalisco 181</p>
+            </div>
+          </a>
+      
+          <a href="https://www.instagram.com/clubsafarijalisco/" target="_blank" style="text-decoration: none; color: inherit;">
+            <div style="background: #fce4ec; padding: 1.5rem; border-radius: 1rem; width: 230px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width: 40px; height: 40px; margin-bottom: 0.8rem;">
+              <p style="font-weight: bold;">@clubsafarijalisco</p>
+            </div>
+          </a>
+      
+          <a href="https://wa.me/5213311075004" target="_blank" style="text-decoration: none; color: inherit;">
+            <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 1rem; width: 230px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="width: 40px; height: 40px; margin-bottom: 0.8rem;">
+              <p style="font-weight: bold;">WhatsApp</p>
+            </div>
+          </a>
+        </div>
+      
+        <p style="text-align: center; font-style: italic; margin-top: 2rem; color: #666;">
+          También puedes asistir cualquier viernes a las 9 PM para conocernos en persona.
+        </p>
+      </section>
+      
 
   <footer>
     <p>&copy; 2025 Club Safari Jalisco 181. Todos los derechos reservados.</p>
