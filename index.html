@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Club Safari Jalisco 181</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -29,11 +29,8 @@
       padding: 2rem 1rem;
     }
     header img {
-      width: 120px;
+      width: 100px;
       margin-bottom: 1rem;
-    }
-    header h1 {
-      font-size: 2rem;
     }
     nav {
       background: var(--color-secundario);
@@ -46,7 +43,7 @@
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: bold;
       transition: color 0.3s;
     }
     nav a:hover {
@@ -68,23 +65,28 @@
       border: none;
       border-radius: 0.5rem;
     }
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+    .eventos, .contacto, .driver-extra {
+      background: white;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
       margin-top: 2rem;
     }
-    .galeria img {
-      width: 100%;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
-    .insta-wrapper iframe {
-      border: none;
-      width: 100%;
-      max-width: 320px;
-      height: 400px;
-      border-radius: 0.5rem;
+    .card {
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      background: white;
+    }
+    .card img {
+      width: 36px;
+      margin-bottom: 1rem;
     }
     .insta-wrapper {
       display: flex;
@@ -93,22 +95,61 @@
       gap: 1rem;
       margin-top: 2rem;
     }
-    .eventos, .contacto, .driver-extra {
-      background: white;
+    .insta-wrapper iframe {
+      width: 100%;
+      max-width: 320px;
+      height: 400px;
       border-radius: 0.5rem;
-      padding: 2rem;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-      margin-top: 2rem;
+      border: none;
     }
     .driver-extra {
       background: #fff3e0;
       text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
     }
-    .driver-extra a {
+    .driver-extra img {
+      max-width: 100px;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .driver-info {
+      max-width: 400px;
+      text-align: left;
+    }
+    .driver-info h3 {
       color: #d84315;
-      font-weight: bold;
-      text-decoration: none;
     }
+    .driver-info a img {
+      width: 28px;
+      height: 28px;
+    }
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .contact-card {
+      border-radius: 1rem;
+      width: 230px;
+      text-align: center;
+      padding: 1.5rem;
+      transition: transform 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .contact-card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.8rem;
+    }
+    .facebook { background: #e3f2fd; }
+    .instagram { background: #fce4ec; }
+    .whatsapp { background: #e8f5e9; }
     footer {
       background: var(--color-secundario);
       color: white;
@@ -116,153 +157,118 @@
       padding: 2rem 1rem;
       margin-top: 3rem;
     }
-    a {
-      color: var(--color-principal);
+    a { color: var(--color-principal); }
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .driver-info {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-<body>
-  <header>
-    <img src="img/logo.png" alt="Logo Club Safari Jalisco">
-    <h1>Club Safari Jalisco 181</h1>
-    <p>Unidos por la aventura y la amistad sobre ruedas</p>
-  </header>
 
-  <nav>
-    <a href="#bienvenida">Inicio</a>
-    <a href="#eventos">Eventos</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<header>
+  <img src="img/logo.png" alt="Logo Club Safari Jalisco">
+  <h1>Club Safari Jalisco 181</h1>
+  <p>Unidos por la aventura y la amistad sobre ruedas</p>
+</header>
 
-<section id="bienvenida" style="background: #fffaf3; padding: 3rem 1rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); max-width: 900px; margin: 3rem auto;">
-  <h2 style="text-align: center; color: #ff6f00; margin-bottom: 1.5rem;">Bienvenidos</h2>
+<nav>
+  <a href="#bienvenida">Inicio</a>
+  <a href="#eventos">Eventos</a>
+  <a href="#galeria">Galería</a>
+  <a href="#contacto">Contacto</a>
+</nav>
 
-  <p style="text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
-    Somos una comunidad familiar, aventurera y colaborativa unida por la pasión por los VW Safari.
-    Nos reunimos cada viernes a partir de las <strong>9 PM</strong> en nuestra sede ubicada en Mariano Otero casi esquina con av. Patria para convivir,
-    compartir rutas, participar en exposiciones y formar nuevas amistades.<br><br>
-    <strong>¡Si tienes un Safari o simplemente te encantan, eres bienvenido!</strong>
-  </p>
-
-  <div class="mapa" style="margin-top: 2rem; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    <iframe 
-      src="https://www.google.com/maps?q=albarran+patria+y+mariano+otero&output=embed" 
-      style="width: 100%; height: 300px; border: none;">
-    </iframe>
+<section id="bienvenida">
+  <h2>Bienvenidos</h2>
+  <p style="text-align:center; font-size: 1.1rem;">Somos una comunidad familiar, aventurera y colaborativa unida por la pasión por los VW Safari. Nos reunimos cada viernes a las <strong>9 PM</strong> en Guadalajara. ¡Si tienes un Safari o simplemente te encantan, eres bienvenido!</p>
+  <div class="mapa" style="margin-top: 2rem;">
+    <iframe src="https://www.google.com/maps?q=albarran+patria+y+mariano+otero&output=embed"></iframe>
   </div>
 </section>
 
-
-  <section id="eventos" class="eventos" style="background: #fffdf9; padding: 3rem 1rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.06); max-width: 900px; margin: 3rem auto;">
-    <h2 style="text-align: center; color: #ff6f00; margin-bottom: 2rem;">Próximos Eventos</h2>
-  
-    <div style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-
-      <!-- SafariFest -->
-      <div style="background: #ede7f6; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f389.svg" alt="Fiesta" style="width: 36px; margin-bottom: 1rem;">
-        <h3 style="font-size: 1.1rem;">
-          <a href="safarifest/" style="text-decoration: none; color: #6a1b9a;">SafariFest 2026</a>
-        </h3>
-        <p>🎉 15 de marzo 2026<br>
-        El evento más grande del año para los amantes del VW Safari.<br>
-        <strong>¡Inscríbete y no te lo pierdas!</strong></p>
-      </div>
-      <!-- Evento 1 -->
-      <div style="background: #e3f2fd; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cd.svg" alt="Ubicación" style="width: 36px; margin-bottom: 1rem;">
-        <h3 style="font-size: 1.1rem;">Reunión Semanal</h3>
-        <p>📍 Viernes 9:00 PM<br>en la sede del club</p>
-      </div>
-  
-      <!-- Evento 2 -->
-      <div style="background: #f1f8e9; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f697.svg" alt="Ruta" style="width: 36px; margin-bottom: 1rem;">
-        <h3 style="font-size: 1.1rem;">Ruta a Tapalpa</h3>
-        <p>🚗 10 de agosto 2025</p>
-      </div>
-  
-      <!-- Evento 3 -->
-      <div style="background: #fff3e0; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3c1.svg" alt="Expo" style="width: 36px; margin-bottom: 1rem;">
-        <h3 style="font-size: 1.1rem;">Expo VW Clásicos GDL</h3>
-        <p>🏁 25 de septiembre 2025</p>
-      </div>
-  
-      
+<section id="eventos" class="eventos">
+  <h2>Próximos Eventos</h2>
+  <div class="event-grid">
+    <div class="card" style="background:#ede7f6;">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f389.svg" alt="Fiesta">
+      <h3><a href="safarifest/" style="color:#6a1b9a;">SafariFest 2026</a></h3>
+      <p>🎉 15 de marzo 2026<br>El evento más grande del año para los amantes del VW Safari.<br><strong>¡Inscríbete!</strong></p>
     </div>
-  </section>
-  
-
-  <section id="galeria">
-    <h2>Galería</h2>
-    <p style="text-align:center">Síguenos y mira nuestras últimas fotos desde <a href="https://www.instagram.com/clubsafarijalisco/" target="_blank">@clubsafarijalisco</a></p>
-    <div class="insta-wrapper">
-      <iframe src="https://www.instagram.com/clubsafarijalisco/embed" allowtransparency="true" loading="lazy"></iframe>
+    <div class="card" style="background:#e3f2fd;">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cd.svg" alt="Reunión">
+      <h3>Reunión Semanal</h3>
+      <p>📍 Viernes 9:00 PM<br>en la sede del club</p>
     </div>
+    <div class="card" style="background:#f1f8e9;">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f697.svg" alt="Ruta">
+      <h3>Ruta a Tapalpa</h3>
+      <p>🚗 10 de agosto 2025</p>
+    </div>
+    <div class="card" style="background:#fff3e0;">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3c1.svg" alt="Expo">
+      <h3>Expo VW Clásicos GDL</h3>
+      <p>🏁 25 de septiembre 2025</p>
+    </div>
+  </div>
+</section>
 
-    <div class="driver-extra" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem;">
-        <img src="img/luchador-driver181.png" alt="Driver 181 en acción" style="max-width: 100px; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-      
-        <div style="max-width: 400px; text-align: left;">
-          <h3 style="margin-bottom: 0.5rem; color: #d84315;">Driver 181</h3>
-          <p style="font-size: 0.95rem; margin-bottom: 0.8rem;">Tu decides si seguirlo o no, tiene complejo de influencer.</p>
-          <p style="font-style: italic; color: #555; margin-bottom: 1rem;">"No me hables de SAFARIS, no tengo AUTOCONTROL"</p>
-          
-          <div style="display: flex; gap: 1.2rem; font-size: 1.8rem;">
-            <a href="https://www.instagram.com/thedriver181/" target="_blank" title="Instagram">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width: 28px; height: 28px;">
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61564321509368" target="_blank" title="Facebook">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width: 28px; height: 28px;">
-            </a>
-          </div>
-      
-          <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Pero recuerda, está loco 🧠💥</p>
-        </div>
+<section id="galeria">
+  <h2>Galería</h2>
+  <p style="text-align:center">Síguenos en <a href="https://www.instagram.com/clubsafarijalisco/" target="_blank">@clubsafarijalisco</a></p>
+  <div class="insta-wrapper">
+    <iframe src="https://www.instagram.com/clubsafarijalisco/embed" loading="lazy"></iframe>
+  </div>
+</section>
+
+<div class="driver-extra">
+  <img src="img/luchador-driver181.png" alt="Driver 181">
+  <div class="driver-info">
+    <h3>Driver 181</h3>
+    <p>Tu decides si seguirlo o no. Tiene complejo de influencer.</p>
+    <p style="font-style: italic; color: #555;">"No me hables de SAFARIS, no tengo AUTOCONTROL"</p>
+    <div style="display:flex; gap:1rem;">
+      <a href="https://www.instagram.com/thedriver181/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+      <a href="https://www.facebook.com/profile.php?id=61564321509368" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+    </div>
+    <p style="margin-top:1rem; font-size:0.9rem; color:#666;">Pero recuerda, está loco 🧠💥</p>
+  </div>
+</div>
+
+<section id="contacto" class="contacto">
+  <h2>Contáctanos</h2>
+  <p style="text-align:center; font-size:1.1rem;">¿Quieres unirte al club o saber más? Escríbenos o visítanos en redes. ¡Estamos para ayudarte!<br/></p>
+  <div class="contact-grid">
+    <a href="https://www.facebook.com/p/CLUB-Safari-Jalisco-181-100030957204675/" target="_blank">
+      <div class="contact-card facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+        <p><strong>Club Safari Jalisco 181</strong></p>
       </div>
-      
-      
-      <section id="contacto" class="contacto" style="background: #fffdf9; padding: 3rem 1rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.06); max-width: 900px; margin: 3rem auto;">
-        <h2 style="text-align: center; color: #ff6f00; margin-bottom: 1.5rem;">Contáctanos</h2>
-        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.1rem;">
-          ¿Quieres unirte al club o saber más? Escríbenos o visítanos en redes. ¡Estamos para ayudarte!
-        </p>
-      
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-          <a href="https://www.facebook.com/p/CLUB-Safari-Jalisco-181-100030957204675/" target="_blank" style="text-decoration: none; color: inherit;">
-            <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 1rem; width: 230px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width: 40px; height: 40px; margin-bottom: 0.8rem;">
-              <p style="font-weight: bold;">Club Safari Jalisco 181</p>
-            </div>
-          </a>
-      
-          <a href="https://www.instagram.com/clubsafarijalisco/" target="_blank" style="text-decoration: none; color: inherit;">
-            <div style="background: #fce4ec; padding: 1.5rem; border-radius: 1rem; width: 230px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width: 40px; height: 40px; margin-bottom: 0.8rem;">
-              <p style="font-weight: bold;">@clubsafarijalisco</p>
-            </div>
-          </a>
-      
-          <a href="https://wa.me/5213311075004" target="_blank" style="text-decoration: none; color: inherit;">
-            <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 1rem; width: 230px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="width: 40px; height: 40px; margin-bottom: 0.8rem;">
-              <p style="font-weight: bold;">WhatsApp</p>
-            </div>
-          </a>
-        </div>
-      
-        <p style="text-align: center; font-style: italic; margin-top: 2rem; color: #666;">
-          También puedes asistir cualquier viernes a las 9 PM para conocernos en persona.
-        </p>
-      </section>
-      
+    </a>
+    <a href="https://www.instagram.com/clubsafarijalisco/" target="_blank">
+      <div class="contact-card instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+        <p><strong>@clubsafarijalisco</strong></p>
+      </div>
+    </a>
+    <a href="https://wa.me/5213311075004" target="_blank">
+      <div class="contact-card whatsapp">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+        <p><strong>WhatsApp</strong></p>
+      </div>
+    </a>
+  </div>
+  <p style="text-align:center; margin-top:2rem; font-style:italic; color:#666;">También puedes asistir cualquier viernes a las 9:00 PM para conocernos en persona.<br/></p>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Club Safari Jalisco 181. Todos los derechos reservados.</p>
-    <p>Juntos salimos, Juntos regresamos</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Club Safari Jalisco 181. Todos los derechos reservados.</p>
+  <p>Juntos salimos, juntos regresamos</p>
+</footer>
+
 </body>
 </html>
